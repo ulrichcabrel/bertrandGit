@@ -6,6 +6,6 @@ nextcloud:
         'overwriteprotocol' => 'https',
         'overwrite.cli.url' => 'https://bertrand-home.nextcloud.net',
         'filelocking.enabled' => 'true',
-        'Loglevel' => '2',
+        'Loglevel' => '3',
         'enable_previews' => falsch
       );
