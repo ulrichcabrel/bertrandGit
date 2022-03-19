@@ -9,7 +9,11 @@ spec:
  replicas: 1
  selector:
    matchLabels:
+<<<<<<< HEAD
      pod-label: nextcloud-db-pod-2
+=======
+     pod-label: nextcloud-db-pod-1
+>>>>>>> 863a1c7523b7ee5ef095cd9d21015870b32725ce
  template:
    metadata:
     labels:
