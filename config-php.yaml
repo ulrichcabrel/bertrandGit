@@ -2,7 +2,7 @@ nextcloud:
   configs: 
     custom.config.php:  |-
       <?php
-      $CONFIG = Array (
+      $CONFIG = Arra (
         'overwriteprotocol' => 'https',
         'overwrite.cli.url' => 'https://bertrand-home.nextcloud.net',
         'filelocking.enabled' => 'true',
