@@ -1,0 +1,11 @@
+nextcloud: 
+  configs: 
+    custom.config.php:  |-
+      <?php
+      $CONFIG = Array (
+        'overwriteprotocol' => 'https',
+        'overwrite.cli.url' => 'https://bertrand-home.nextcloud.net',
+        'filelocking.enabled' => 'true',
+        'Loglevel' => '2',
+        'enable_previews' => falsch
+      );
