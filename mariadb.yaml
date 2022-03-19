@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: nv-1
+  name: nextcloud-db-1
+  labels:
+    app: nextcloud-1
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     pod-label: nextcloud-db-pod-1
+ template:
+   metadata:
+    labels:
+     pod-label: nextcloud-db-pod-1
+   spec:
+    #nodeSelector:
+       #workload: prod
+    containers:
+    - name: mysql-nextcloud-db-1
+      image: mariadb
+      env:
+      #- name: MYSQL_DATABASE
+      - name: MYSQL_ROOT_PASSWORD
+        #value: nextcloud
+      #envFrom:
+        valueFrom:
+          secretKeyRef:
+            name: ms-db-passd
+            key: mysql-password
+      #- secretRef:
+          #name: ms-db-passd
+      volumeMounts:
+      - name: db-storage-1
+        mountPath: /var/lib/mysql
+        ##subPath: mysql-data
+    volumes:
+    - name: db-storage-1
+      persistentVolumeClaim:
+        claimName: mysql-pv-claim-1
