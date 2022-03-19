@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 apiVersion: apps/v3
+=======
+apiVersion: apps/v2
+>>>>>>> d385367d909001cbbbbde7978054ac4f00ccd6b9
 kind: Deployment
 metadata:
   namespace: nv-1
